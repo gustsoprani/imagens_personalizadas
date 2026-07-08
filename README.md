@@ -21,6 +21,7 @@ Evidências de Funcionamento
 
 1. Registro da Construção da Imagem (Build)
 
+```text
 PS imagens_personalizadas> docker build -t minha-app-python:1.0 .
 [+] Building 9.6s (10/10) FINISHED                                                                                                                         docker:desktop-linux
  => [internal] load build definition from Dockerfile                                                                                                                       0.0s
@@ -28,8 +29,8 @@ PS imagens_personalizadas> docker build -t minha-app-python:1.0 .
  => [internal] load metadata for docker.io/library/python:3.12-slim                                                                                                        2.0s
  => [internal] load .dockerignore                                                                                                                                          0.0s
  => => transferring context: 107B                                                                                                                                          0.0s
- => [1/5] FROM docker.io/library/python:3.12-slim@sha256:423ed6ab25b1921a477529254bfeeabf5855151dc2c3141699a1bfc852199fbf                                                  4.8s
- => => resolve docker.io/library/python:3.12-slim@sha256:423ed6ab25b1921a477529254bfeeabf5855151dc2c3141699a1bfc852199fbf                                                  0.0s
+ => [1/5] FROM docker.io/library/python:3.12-slim@sha256:423ed6ab25b1921a477529254bfeeabf5855151dc2c3141699a1bfc852199fbf                                                   4.8s
+ => => resolve docker.io/library/python:3.12-slim@sha256:423ed6ab25b1921a477529254bfeeabf5855151dc2c3141699a1bfc852199fbf                                                   0.0s
  => => sha256:b32430367bf08f32c23778909985ac645d1794f0aeef670aa796a50c8751527d 248B / 248B                                                                                 0.2s
  => => sha256:df79d931cd67092e2b8e48d8f6369922571efe4ee0f9af71636ce36600481492 12.11MB / 12.11MB                                                                           1.3s
  => => sha256:aff2d9f8dc87f4c10bbb7f438f3a325169379776bdfad5c49e4be5acc3c2f192 1.29MB / 1.29MB                                                                             0.8s
@@ -51,12 +52,14 @@ PS imagens_personalizadas> docker build -t minha-app-python:1.0 .
  => => exporting manifest list sha256:9e6165f512f0c3753783ff4d72628efdc871c1398070b73fc4584b75400468ce                                                                     0.0s
  => => naming to docker.io/library/minha-app-python:1.0                                                                                                                    0.0s
  => => unpacking to docker.io/library/minha-app-python:1.0                                                                                                                 0.2s
-
+```
 2. Registro da Execução da Aplicação (Run)
 
+```
 PS imagens_personalizadas> docker run --rm minha-app-python:1.0
 EXECUTANDO APLICAÇÃO DENTRO DO CONTÊINER DOCKER
  - Resultado da soma (10 + 5): 15
  - Resultado da multiplicação (4 * 3): 12
  - Resultado da divisão (20 / 4): 5.0
 Aplicação executada com SUCESSO
+```
